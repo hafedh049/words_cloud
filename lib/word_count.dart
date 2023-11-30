@@ -12,6 +12,8 @@ class WordCount extends StatefulWidget {
 class _WordCountState extends State<WordCount> {
   final List<Map<String, dynamic>> _data_list = <Map<String, dynamic>>[];
   late final WordCloudData _cloudData;
+  final WordCloudTap _tap  = WordCloudTap();
+
 
   @override
   void initState() {
