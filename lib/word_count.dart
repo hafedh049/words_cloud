@@ -9,8 +9,13 @@ class WordCount extends StatefulWidget {
 }
 
 class _WordCountState extends State<WordCount> {
-  final List<Map<String, dynamic>> data_list = <Map<String, dynamic>>[];
-  final WordCloudData mydata = WordCloudData(data: data_list);
+  final List<Map<String, dynamic>> _data_list = <Map<String, dynamic>>[];
+  late final WordCloudData _cloudData;
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
