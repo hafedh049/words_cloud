@@ -31,7 +31,7 @@ class _WordCountState extends State<WordCount> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Expanded(
+          Sis(
             child: WordCloudTapView(
               wordtap: _tap,
               data: _cloudData,
