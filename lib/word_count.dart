@@ -97,6 +97,21 @@ class _WordCountState extends State<WordCount> {
 
   @override
   Widget build(BuildContext context) {
+    WordCloudData wcdata = WordCloudData(data: word_list);
+    WordCloudTap wordtaps = WordCloudTap();
+
+    //WordCloudTap Setting
+    for (int i = 0; i < word_list.length; i++) {
+      void tap() {
+        setState(() {
+          count += 1;
+          wordstring = word_list[i]['word'];
+        });
+      }
+
+      wordtaps.addWordtap(word_list[i]['word'], tap);
+    }
+
     return Scaffold(
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
