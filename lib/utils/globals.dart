@@ -1,3 +1,3 @@
 import 'package:flutter/material.dart';
 
-Color amber = Colors.amber;
+const Color amber = Colors.amber;
