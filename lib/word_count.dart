@@ -13,7 +13,7 @@ class WordCount extends StatefulWidget {
 class _WordCountState extends State<WordCount> {
   final List<Map<String, dynamic>> _data_list = <Map<String, dynamic>>[
     <String, dynamic>{'word': 'Apple', 'value': 100},
-    {'word': 'Samsung', 'value': 60},
+    <String, dynamic>{'word': 'Samsung', 'value': 60},
   ];
   late final WordCloudData _cloudData;
   final WordCloudTap _tap = WordCloudTap();
