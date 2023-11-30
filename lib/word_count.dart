@@ -26,11 +26,13 @@ class _WordCountState extends State<WordCount> {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          WordCloudTapView(
-            wordtap: _tap,
-            data: _cloudData,
-            mapwidth: 500,
-            mapheight: 500,
+          Expanded(
+            child: WordCloudTapView(
+              wordtap: _tap,
+              data: _cloudData,
+              mapwidth: 500,
+              mapheight: 500,
+            ),
           )
         ],
       ),
