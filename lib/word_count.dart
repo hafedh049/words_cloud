@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:word_cloud/word_cloud_data.dart';
+import 'package:word_cloud/word_cloud_view.dart';
 
 class WordCount extends StatefulWidget {
   const WordCount({super.key});
@@ -24,7 +25,7 @@ class _WordCountState extends State<WordCount> {
       body: Column(
         children: <Widget>[
           WordCloudView(
-            data: mydata,
+            data: _cloudData,
             mapwidth: 500,
             mapheight: 500,
           )
