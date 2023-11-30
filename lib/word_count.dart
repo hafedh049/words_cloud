@@ -9,7 +9,7 @@ class WordCount extends StatefulWidget {
 }
 
 class _WordCountState extends State<WordCount> {
-  final List<Map<String,dynamic>>
+  final List<Map<String, dynamic>> data_list = <Map<String, dynamic>>[];
   final WordCloudData mydata = WordCloudData(data: data_list);
 
   @override
