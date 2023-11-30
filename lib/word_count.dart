@@ -25,6 +25,7 @@ class _WordCountState extends State<WordCount> {
       body: Column(
         children: <Widget>[
           WordCloudTapView(
+            wordtap: ,
             data: _cloudData,
             mapwidth: 500,
             mapheight: 500,
