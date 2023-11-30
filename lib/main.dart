@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:word_cloud/word_count.dart';
+import 'package:words_cloud/word_count.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
