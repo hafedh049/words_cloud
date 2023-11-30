@@ -8,6 +8,8 @@ class WordCount extends StatefulWidget {
 }
 
 class _WordCountState extends State<WordCount> {
+  WordCloudData mydata = WordCloudData(data: data_list);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
