@@ -28,7 +28,6 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
 
-  #     fonts:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
