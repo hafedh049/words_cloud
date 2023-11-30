@@ -90,12 +90,6 @@ class _WordCountState extends State<WordCount> {
   String wordstring = '';
 
   @override
-  void initState() {
-    _cloudData = WordCloudData(data: _data_list);
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     WordCloudData wcdata = WordCloudData(data: word_list);
     WordCloudTap wordtaps = WordCloudTap();
