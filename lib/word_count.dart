@@ -35,8 +35,8 @@ class _WordCountState extends State<WordCount> {
             child: WordCloudTapView(
               wordtap: _tap,
               data: _cloudData,
-              mapwidth: 500,
-              mapheight: 500,
+              mapwidth: 500.0,
+              mapheight: 500.0,
             ),
           )
         ],
