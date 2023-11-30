@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:words_cloud/word_count.dart';
+import 'package:words_cloud/words_count.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,7 +13,7 @@ class Main extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const WordCount(),
+      home: const WordsCount(),
       theme: ThemeData.dark(),
     );
   }

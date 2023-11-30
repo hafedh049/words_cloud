@@ -5,14 +5,14 @@ import 'package:word_cloud/word_cloud_tap.dart';
 import 'package:word_cloud/word_cloud_tap_view.dart';
 import 'package:word_cloud/word_cloud_view.dart';
 
-class WordCount extends StatefulWidget {
-  const WordCount({super.key});
+class WordsCount extends StatefulWidget {
+  const WordsCount({super.key});
 
   @override
-  State<WordCount> createState() => _WordCountState();
+  State<WordsCount> createState() => _WordsCountState();
 }
 
-class _WordCountState extends State<WordCount> {
+class _WordsCountState extends State<WordsCount> {
   //example data list
   List<Map> word_list = [
     {'word': 'Apple', 'value': 100},
@@ -124,8 +124,8 @@ class _WordCountState extends State<WordCount> {
                 data: wcdata,
                 wordtap: wordtaps,
                 mapcolor: Color.fromARGB(255, 174, 183, 235),
-                mapwidth: 500,
-                mapheight: 500,
+                mapwidth: 274,
+                mapheight: 200,
                 fontWeight: FontWeight.bold,
                 shape: WordCloudCircle(radius: 250),
                 colorlist: [Colors.black, Colors.redAccent, Colors.indigoAccent],
@@ -137,8 +137,8 @@ class _WordCountState extends State<WordCount> {
               WordCloudView(
                 data: wcdata,
                 mapcolor: Color.fromARGB(255, 174, 183, 235),
-                mapwidth: 500,
-                mapheight: 500,
+                mapwidth: 274,
+                mapheight: 200,
                 fontWeight: FontWeight.bold,
                 colorlist: [Colors.black, Colors.redAccent, Colors.indigoAccent],
               ),
