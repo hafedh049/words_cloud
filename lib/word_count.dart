@@ -11,7 +11,6 @@ class WordCount extends StatefulWidget {
 }
 
 class _WordCountState extends State<WordCount> {
-
   List<Map> word_list = [
     {'word': 'Apple', 'value': 100},
     {'word': 'Samsung', 'value': 60},
@@ -89,26 +88,6 @@ class _WordCountState extends State<WordCount> {
   ];
   int count = 0;
   String wordstring = '';
-
-  @override
-  Widget build(BuildContext context) {
-
-    WordCloudData wcdata = WordCloudData(data: word_list);
-    WordCloudTap wordtaps = WordCloudTap();
-
-
-    //WordCloudTap Setting
-    for (int i = 0; i < word_list.length; i++) {
-      void tap() {
-        setState(() {
-          count += 1;
-          wordstring = word_list[i]['word'];
-        });
-      }
-
-      wordtaps.addWordtap(word_list[i]['word'], tap);
-    }
-
 
   @override
   void initState() {
