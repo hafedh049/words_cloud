@@ -14,6 +14,7 @@ class _WordCountState extends State<WordCount> {
 
   @override
   void initState() {
+    _cloudData = WordCloudData(data: _data_list);
     super.initState();
   }
 
