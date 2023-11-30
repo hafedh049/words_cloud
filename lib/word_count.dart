@@ -27,17 +27,41 @@ class _WordCountState extends State<WordCount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          WordCloudTapView(
-            wordtap: _tap,
-            data: _cloudData,
-            mapwidth: 500.0,
-            mapheight: 500.0,
-          )
-        ],
+      body: Center(
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+          Text(
+            'Clicked Word : ${wordstring}',
+            style: TextStyle(fontSize: 20),
+          ),
+          Text('Clicked Count : ${count}', style: TextStyle(fontSize: 20)),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              WordCloudTapView(
+                data: wcdata,
+                wordtap: wordtaps,
+                mapcolor: Color.fromARGB(255, 174, 183, 235),
+                mapwidth: 500,
+                mapheight: 500,
+                fontWeight: FontWeight.bold,
+                shape: WordCloudCircle(radius: 250),
+                colorlist: [Colors.black, Colors.redAccent, Colors.indigoAccent],
+              ),
+              SizedBox(
+                height: 15,
+                width: 30,
+              ),
+              WordCloudView(
+                data: wcdata,
+                mapcolor: Color.fromARGB(255, 174, 183, 235),
+                mapwidth: 500,
+                mapheight: 500,
+                fontWeight: FontWeight.bold,
+                colorlist: [Colors.black, Colors.redAccent, Colors.indigoAccent],
+              ),
+            ],
+          ),
+        ]),
       ),
     );
   }
