@@ -13,6 +13,7 @@ class WordCount extends StatefulWidget {
 }
 
 class _WordCountState extends State<WordCount> {
+  //example data list
   List<Map> word_list = [
     {'word': 'Apple', 'value': 100},
     {'word': 'Samsung', 'value': 60},
@@ -109,6 +110,10 @@ class _WordCountState extends State<WordCount> {
     }
 
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(widget.title),
+      ),
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
           Text(
