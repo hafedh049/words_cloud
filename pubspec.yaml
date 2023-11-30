@@ -28,7 +28,6 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
 
-  #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
