@@ -11,12 +11,104 @@ class WordCount extends StatefulWidget {
 }
 
 class _WordCountState extends State<WordCount> {
-  final List<Map<String, dynamic>> _data_list = <Map<String, dynamic>>[
-    <String, dynamic>{'word': 'Apple', 'value': 100.0},
-    <String, dynamic>{'word': 'Samsung', 'value': 60.0},
+
+  List<Map> word_list = [
+    {'word': 'Apple', 'value': 100},
+    {'word': 'Samsung', 'value': 60},
+    {'word': 'Intel', 'value': 55},
+    {'word': 'Tesla', 'value': 50},
+    {'word': 'AMD', 'value': 40},
+    {'word': 'Google', 'value': 35},
+    {'word': 'Qualcom', 'value': 31},
+    {'word': 'Netflix', 'value': 27},
+    {'word': 'Meta', 'value': 27},
+    {'word': 'Amazon', 'value': 26},
+    {'word': 'Nvidia', 'value': 25},
+    {'word': 'Microsoft', 'value': 25},
+    {'word': 'TSMC', 'value': 24},
+    {'word': 'PayPal', 'value': 24},
+    {'word': 'AT&T', 'value': 24},
+    {'word': 'Oracle', 'value': 23},
+    {'word': 'Unity', 'value': 23},
+    {'word': 'Roblox', 'value': 23},
+    {'word': 'Lucid', 'value': 22},
+    {'word': 'Naver', 'value': 20},
+    {'word': 'Kakao', 'value': 18},
+    {'word': 'NC Soft', 'value': 18},
+    {'word': 'LG', 'value': 16},
+    {'word': 'Hyundai', 'value': 16},
+    {'word': 'KIA', 'value': 16},
+    {'word': 'twitter', 'value': 16},
+    {'word': 'Tencent', 'value': 15},
+    {'word': 'Alibaba', 'value': 15},
+    {'word': 'LG', 'value': 16},
+    {'word': 'Hyundai', 'value': 16},
+    {'word': 'KIA', 'value': 16},
+    {'word': 'twitter', 'value': 16},
+    {'word': 'Tencent', 'value': 15},
+    {'word': 'Alibaba', 'value': 15},
+    {'word': 'Disney', 'value': 14},
+    {'word': 'Spotify', 'value': 14},
+    {'word': 'Udemy', 'value': 13},
+    {'word': 'Quizlet', 'value': 13},
+    {'word': 'Visa', 'value': 12},
+    {'word': 'Lucid', 'value': 22},
+    {'word': 'Naver', 'value': 20},
+    {'word': 'Hyundai', 'value': 16},
+    {'word': 'KIA', 'value': 16},
+    {'word': 'twitter', 'value': 16},
+    {'word': 'Tencent', 'value': 15},
+    {'word': 'Alibaba', 'value': 15},
+    {'word': 'Disney', 'value': 14},
+    {'word': 'Spotify', 'value': 14},
+    {'word': 'Visa', 'value': 12},
+    {'word': 'Microsoft', 'value': 10},
+    {'word': 'TSMC', 'value': 10},
+    {'word': 'PayPal', 'value': 24},
+    {'word': 'AT&T', 'value': 10},
+    {'word': 'Oracle', 'value': 10},
+    {'word': 'Unity', 'value': 10},
+    {'word': 'Roblox', 'value': 10},
+    {'word': 'Lucid', 'value': 10},
+    {'word': 'Naver', 'value': 10},
+    {'word': 'Kakao', 'value': 18},
+    {'word': 'NC Soft', 'value': 18},
+    {'word': 'LG', 'value': 16},
+    {'word': 'Hyundai', 'value': 16},
+    {'word': 'KIA', 'value': 16},
+    {'word': 'twitter', 'value': 16},
+    {'word': 'Tencent', 'value': 10},
+    {'word': 'Alibaba', 'value': 10},
+    {'word': 'Disney', 'value': 14},
+    {'word': 'Spotify', 'value': 14},
+    {'word': 'Udemy', 'value': 13},
+    {'word': 'NC Soft', 'value': 12},
+    {'word': 'LG', 'value': 16},
+    {'word': 'Hyundai', 'value': 10},
+    {'word': 'KIA', 'value': 16},
   ];
-  late final WordCloudData _cloudData;
-  final WordCloudTap _tap = WordCloudTap();
+  int count = 0;
+  String wordstring = '';
+
+  @override
+  Widget build(BuildContext context) {
+
+    WordCloudData wcdata = WordCloudData(data: word_list);
+    WordCloudTap wordtaps = WordCloudTap();
+
+
+    //WordCloudTap Setting
+    for (int i = 0; i < word_list.length; i++) {
+      void tap() {
+        setState(() {
+          count += 1;
+          wordstring = word_list[i]['word'];
+        });
+      }
+
+      wordtaps.addWordtap(word_list[i]['word'], tap);
+    }
+
 
   @override
   void initState() {
