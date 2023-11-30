@@ -22,7 +22,13 @@ class _WordCountState extends State<WordCount> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: <Widget>[],
+        children: <Widget>[
+          WordCloudView(
+            data: mydata,
+            mapwidth: 500,
+            mapheight: 500,
+          )
+        ],
       ),
     );
   }
